@@ -1,0 +1,6 @@
+<div *ngFor="let movie of movies">
+
+    <!-- <li>{{ movie.title }} - {{ movie.desc }} - {{ movie.active }} </li> -->
+
+    <app-movie-detail [movie] = "movie  "></app-movie-detail>
+</div>
