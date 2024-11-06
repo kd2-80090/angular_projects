@@ -1,0 +1,13 @@
+<!-- src/app/components/movie-list/movie-list.component.html -->
+<div *ngIf="movies.length > 0; else noMovies">
+    <h2>Movie List</h2>
+    <ul>
+      <li *ngFor="let movie of movies">
+        {{ movie.title }} - {{ movie.description }}
+      </li>
+    </ul>
+  </div>
+  <ng-template #noMovies>
+    <p>No movies found.</p>
+  </ng-template>
+  

@@ -1,0 +1,12 @@
+<!-- src/app/test/test.component.html -->
+<div>
+    <h2>Test Component</h2>
+    <div *ngIf="data">
+      <h3>{{ data.title }}</h3>
+      <p>{{ data.body }}</p>
+    </div>
+    <div *ngIf="!data">
+      <p>Loading...</p>
+    </div>
+  </div>
+  

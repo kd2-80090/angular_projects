@@ -1,0 +1,109 @@
+/* movie-list.component.css*/
+
+/* General styles for the movie list container */
+.movie-list-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Styling for the movie list heading */
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Table styling */
+.movie-list {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.movie-list th,
+.movie-list td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.movie-list th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.movie-item td {
+  font-size: 1.1em;
+}
+
+.movie-item h3 {
+  font-size: 1.2em;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.movie-item p {
+  font-size: 1em;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+/* Pagination controls */
+.pagination-controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination-controls button {
+  padding: 10px 15px;
+  font-size: 1em;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.pagination-controls button:hover {
+  background-color: #2980b9;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.page-numbers button {
+  padding: 10px 15px;
+  font-size: 1em;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.page-numbers button:hover {
+  background-color: #bdc3c7;
+}
+
+/* No movies found styling */
+ng-template #noMovies p {
+  text-align: center;
+  font-size: 1.2em;
+  color: #7f8c8d;
+  margin-top: 20px;
+}
