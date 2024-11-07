@@ -16,7 +16,7 @@ export class MovieListComponent implements OnInit {
   movies: any[] = [];
   totalCount: number = 0;
   pageNumber: number = 0;
-  pageSize: number = 10; // Default page size
+  pageSize: number = 6; // Default page size
   totalPages: number = 0; // Total number of pages
   errorMessage: string | undefined;
   router: any;

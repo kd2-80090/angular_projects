@@ -1,9 +1,44 @@
+
+<!-- Navbar Section -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <table>
+    <thead></thead>
+    <tbody>
+      <tr>
+        <td> <h2 style="color: aliceblue">Movie Review System</h2> </td>
+        <td>
+          <table>
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a class="nav-link" href="">Home</a>
+                </td>
+                <td>
+                  <a class="nav-link" href="/addMovie">Add Movie</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+</nav>
+
+
 <div class="movie-list-container"> 
-  <h2>Movie List</h2>
+  <!-- <h3>Movie List</h3> -->
+   <br>
   <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
 
   <!-- <a href="app"></a> <app-add-movie (movieAdded)="onMovieAdded()"></app-add-movie>  -->
   <!-- <button (click)="navigateToAddMovie()" class="add-movie-btn">Add Movie</button> -->
+
+  <!-- <a routerLink="/add-movie" class="add-movie-link">Add Movie</a> -->
 
   <div *ngIf="movies.length > 0; else noMovies">
 
@@ -11,28 +46,39 @@
       <thead>
         <tr>
           <th>Movie Name</th>
-          <th>Release Date</th>
+          <!-- <th>Release Date</th> -->
           <th>Reviews</th>
           <th>Add Review</th>
         </tr>
       </thead>
       <tbody *ngFor="let movie of movies" class="movie-item">
         <tr>
-          <td><h3>{{ movie.movieName }}</h3></td>
-          <td><p>{{ movie.releaseDate }}</p></td>
+          <td><h5>{{ movie.movieName }}</h5> <p>Released on {{ movie.releaseDate }}</p>
+              <!-- <button class="button-info"> Add Review</button> -->
+          </td>
+          <!-- <td><p>{{ movie.releaseDate }}</p></td> -->
+           <td>
+            <a routerLink="/get-reviews" >See Reviews Here</a>
+           </td>
+           <td>
+            <a routerLink="/add-review" >Click To Review</a>
+           </td>
         </tr>
-      </tbody>
+      </tbody>  
     </table>
 
     <div class="pagination-controls">
       <button (click)="previousPage()" [disabled]="pageNumber === 0">Back Page</button>
       <button (click)="nextPage()" [disabled]="pageNumber >= totalPages - 1">Next Page</button>
-    
+      
+      <br>
+      <br>
       <div *ngIf="totalPages > 1" class="page-numbers">
         <button *ngFor="let i of [].constructor(totalPages); let pageIndex = index"
                 (click)="goToPage(pageIndex)">
           {{ pageIndex + 1 }}
         </button>
+        <hr>
       </div>
     </div>
        
@@ -42,3 +88,9 @@
     <p>No movies found.</p>
   </ng-template>
 </div>
+
+<!-- Footer Section -->
+<footer class="footer">
+  <!-- <hr class="footer-line"> -->
+  <p>All rights reserved ©MRS 2024</p>
+</footer>
