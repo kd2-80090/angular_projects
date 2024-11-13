@@ -1,0 +1,43 @@
+<ng-container *ngIf="movie?.status === 'active'">
+    <div class="card">
+      <div class="card-img-wrapper">
+        <img
+          class="card-img-top"
+          [src]="getImagePath(movie.movieName)"
+          [alt]="movie.movieName"
+        />
+  
+        <ul class="list-inline text-center member-icons animate">
+          
+          <!-- Movie Ticket Button -->
+          <li class="list-inline-item">
+            <button (click)="downloadMovieTicket(movie.id)" class="btn btn-success">
+              <i class="fa-solid fa-ticket"></i> Book Movie Ticket
+            </button>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="card-body p-2">
+        <h3 style="color: black; font-size: 24px;">{{ movie.movieName }}</h3>
+  
+        <!-- <p>Release Date: {{ movie.releaseDate | date: 'dd/MM/yyyy' }}</p> -->
+        Released on {{ movie.releaseDate | date: 'd' }}<span>{{ movie.releaseDate | daySuffix }}</span>
+        {{ movie.releaseDate | date: 'MMMM yyyy' }}
+      </div>
+      <button
+        (click)="seeReviews(movie.id)"
+        class="btn btn-outline-info btn-see-reviews w-100 mt-2"
+      >
+        <i class="fa-solid fa-star"></i> See Reviews
+      </button>
+      <button
+      (click)="addReview(movie.id)"
+      class="btn btn-outline-primary btn-add-review w-100 mt-2"  
+    >
+      <!-- <i class="fa-solid fa-pencil-alt"></i> Add Review -->
+      Add Review
+    </button>
+    </div>
+  </ng-container>
+  

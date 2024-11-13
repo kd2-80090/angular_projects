@@ -1,0 +1,23 @@
+.error {
+    color: red;
+    font-weight: bold;
+  }
+  
+  h3 {
+    color: #2c3e50;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  strong {
+    color: #34495e;
+  }
+  

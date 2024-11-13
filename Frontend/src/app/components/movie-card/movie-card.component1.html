@@ -1,0 +1,33 @@
+<ng-container *ngIf="movie?.status === 'active'">
+    <div class="card">
+      <div class="card-img-wrapper">
+        <img
+          class="card-img-top"
+          [src]="getImagePath(movie.movieName)"
+          [alt]="movie.movieName"
+        />
+  
+        <ul class="list-inline text-center member-icons animate">
+          <li class="list-inline-item">
+            <button (click)="navigateToEditMovie()" class="btn btn-primary">
+              <i class="fa-regular fa-pen-to-square"></i>
+            </button>
+          </li>
+          <li class="list-inline-item">
+            <button (click)="navigateToDeleteMovie()" class="btn btn-primary">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="card-body p-2">
+        <h3 style="color: black; font-size: 24px;">{{ movie.movieName }}</h3>
+
+        <!-- <p>Release Date: {{ movie.releaseDate | date: 'dd/MM/yyyy' }}</p> -->
+        Released on {{ movie.releaseDate | date: 'd' }}<span>{{ movie.releaseDate | daySuffix }}</span> 
+        {{ movie.releaseDate | date: 'MMMM yyyy' }}
+      </div>
+    </div>
+  </ng-container>
+  

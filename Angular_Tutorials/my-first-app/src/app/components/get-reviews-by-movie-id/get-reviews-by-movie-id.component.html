@@ -1,1 +1,17 @@
-<p>get-reviews-by-movie-id works!</p>
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+<div *ngIf="reviews.length > 0; else noReviews">
+  <h3>Reviews for Movie ID: {{ movieId }}</h3>
+  <ul>
+    <li *ngFor="let review of reviews">
+      <strong>Reviewer:</strong> {{ review.reviewerName }} <br>
+      <strong>Rating:</strong> {{ review.rating }} / 5 <br>
+      <p>{{ review.comment }}</p>
+      <hr>
+    </li>
+  </ul>
+</div>
+
+<ng-template #noReviews>
+  <p>No reviews found for this movie.</p>
+</ng-template>

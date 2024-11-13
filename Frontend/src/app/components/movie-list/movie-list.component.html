@@ -1,0 +1,19 @@
+<!-- <br />
+<hr /> -->
+<!-- <a routerLink="/movies/addMovie">Add Movie</a> -->
+<!-- <ul>
+  <li>
+    <button class="btn btn-primary" (click)="navigateToAddMovie()">
+      Add Movie
+    </button>
+  </li>
+</ul> -->
+
+<!-- <hr /> -->
+<div class="row">
+  <div *ngFor="let movie of movies" class="shadow-lg col-sm-4 p-3">
+    <app-movie-card
+      [movie]="movie"
+    ></app-movie-card>
+  </div>
+</div>

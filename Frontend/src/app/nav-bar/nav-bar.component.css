@@ -1,0 +1,87 @@
+/* General Navbar Styling */
+.navbar {
+  padding: 0.8rem 1rem;
+  background-color: #343a40; /* Dark background color */
+}
+
+.navbar .navbar-brand {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 2rem;
+  text-decoration: none;
+}
+
+.navbar .navbar-brand:hover {
+  color: #f8f9fa;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-right: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #f8f9fa;
+}
+
+.navbar .navbar-nav .nav-item.active .nav-link {
+  color: #28a745; /* Green color for active link */
+}
+
+.navbar .navbar-nav .nav-item.dropdown .dropdown-menu {
+  background-color: #343a40; /* Dark background for dropdown */
+  padding: 0.5rem;
+}
+
+.navbar .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item {
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.navbar .navbar-nav .nav-item .nav-link.disabled {
+  color: #6c757d;
+}
+
+/* For screens less than 768px wide (mobile devices) */
+@media (max-width: 767px) {
+  .navbar .navbar-nav {
+    margin-top: 1rem;
+  }
+
+  .navbar .navbar-toggler {
+    display: block;
+  }
+
+  .navbar .navbar-collapse {
+    margin-top: 1rem;
+  }
+
+  .navbar .form-control {
+    width: 100%;
+  }
+  
+}
+
+/* Footer bottom styling for nav */
+.footer-bottom {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+body {
+  padding-top: 80px; /* Adjust this to match the height of the navbar */
+}
+ 

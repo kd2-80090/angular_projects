@@ -8,6 +8,9 @@ import { Movie } from '../models/movie.model'; // Adjust the import according to
   providedIn: 'root',
 })
 export class MovieService {
+  getMovieReviews(movieId: number) {
+    throw new Error('Method not implemented.');
+  }
   private apiUrl = 'http://localhost:8080/movie'; // Base API URL for better management
 
   constructor(private http: HttpClient) {} // Inject HttpClient
